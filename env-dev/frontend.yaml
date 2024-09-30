@@ -15,5 +15,6 @@ secrets:
     payment: localhost
 
 service:
+  port: 80
   type: NodePort
   containerPort: 80

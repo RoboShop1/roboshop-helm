@@ -10,5 +10,5 @@ spec:
   ports:
     - port: {{ .Values.service.port }}
       targetPort: {{ .Release.Name }}-port
-      name: some
+
 
