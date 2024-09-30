@@ -28,3 +28,5 @@ then
 fi
 
 vault kv get  ${mount}/${secret}   | sed -n  '/Data/, $ p' | sed '1,3 d' | awk '{print "export " $1"="$2}' > /data/${secret}-secrets
+
+#
