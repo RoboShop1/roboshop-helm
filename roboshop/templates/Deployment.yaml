@@ -24,6 +24,6 @@ spec:
                 name: {{ .Release.Name }}-secret
           {{- end }}
           ports:
-            - name: {{ .Release.Name }}-port
-              containerPort: {{ .Values.service.containerPort }}
+             - containerPort: {{ .Values.service.containerPort }}
+               name: {{ .Release.Name }}-port
 
