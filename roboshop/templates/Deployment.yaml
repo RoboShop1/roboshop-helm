@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-deploy
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: roboshop-{{ .Release.Name }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}
+  replicas: {{ include "roboshop.replicas" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: nginx
+          image: chaitu1812/{{ .Release.Name }}:{{ .Values.tag }}
+          {{- if .Values.secrets.required }}
+          envFrom:
+            - secretRef:
+                name: {{ .Release.Name }}-secret
+          {{- end }}
+          ports:
+            - name: {{ .Release.Name }}-port
+              containerPort: {{ .Values.service.containerPort }}
+
