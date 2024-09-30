@@ -1,5 +1,6 @@
 env: dev
-replicas: 3
+
+replicass: 3
 
 
 secrets:
