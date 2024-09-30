@@ -6,7 +6,7 @@ tag: latest
 
 
 secrets:
-  required: false
+  required: true
   env:
     catalogue: localhost
     user: localhost
