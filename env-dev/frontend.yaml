@@ -2,6 +2,8 @@ env: dev
 
 replicas: 3
 
+tag: latest
+
 
 secrets:
   required: true
