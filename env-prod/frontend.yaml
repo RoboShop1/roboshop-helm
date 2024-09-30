@@ -1,5 +1,4 @@
 env: dev
-namespace: dev
 replicas: 3
 
 
