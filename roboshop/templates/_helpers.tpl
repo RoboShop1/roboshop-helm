@@ -8,3 +8,8 @@
 {{- end }}
 {{- end }}
 
+{{- define "roboshop.replicas" -}}
+{{- printf "%s" "chaitu" }}
+{{- end }}
+
+
