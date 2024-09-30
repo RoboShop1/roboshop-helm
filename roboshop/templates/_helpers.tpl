@@ -1,4 +1,4 @@
-{{- define "roboshop.replicas" -}}
+{{- define "roboshop.replicas1" -}}
 {{- if eq .Values.env "dev" }}
 {{- printf "%s" .Values.replicas }}
 {{- else if eq .Values.env "prod" }}
