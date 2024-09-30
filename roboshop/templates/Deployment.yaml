@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: chaitu1812/{{ .Release.Name }}:{{ .Values.tag }}
+          image: chaitu1812/roboshop-{{ .Release.Name }}:{{ .Values.tag }}
           {{- if .Values.secrets.required }}
           envFrom:
             - secretRef:
