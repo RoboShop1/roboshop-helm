@@ -9,7 +9,7 @@
 {{- end }}
 
 {{- define "roboshop.replicas" -}}
-{{- printf "%s" .Values.replicass }}
+{{- default .Values.replicass }}
 {{- end }}
 
 
