@@ -1,0 +1,16 @@
+env: dev
+replicas: 3
+
+
+secrets:
+  required: true
+  env:
+    catalogue: localhost
+    user: localhost
+    cart: localhost
+    shipping: localhost
+    payment: localhost
+
+service:
+  type: NodePort
+  containerPort: 80
