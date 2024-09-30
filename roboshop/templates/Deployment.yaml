@@ -9,7 +9,7 @@ spec:
   selector:
     matchLabels:
       app: {{ .Release.Name }}
-  replicas: {{ include "roboshop.replicas" . }}
+  replicas: {{ .Values.replicas }}
   template:
     metadata:
       labels:
