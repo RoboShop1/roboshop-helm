@@ -9,7 +9,7 @@
 {{- end }}
 
 {{- define "roboshop.replicas" -}}
-{{- printf "%s" .Values.replicas }}
+{{- printf "%s" .Values.env }}
 {{- end }}
 
 
