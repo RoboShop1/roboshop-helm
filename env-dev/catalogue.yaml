@@ -1,0 +1,24 @@
+env: dev
+
+replicas: 1
+
+tag: latest
+
+schemaLoad:
+  required: true
+  env:
+    COMPONENT: mongo
+    CODE_URL: https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip
+    SCHEMA_FILE: /app/db/master-data.js
+    MONGO_DB_ADDRESS: 172.31.21.239
+
+secrets:
+  required: true
+  env:
+    MONGO: true
+    MONGO_URL: mongodb://mongodb:27017/catalogue
+
+service:
+  port: 8080
+  type: ClusterIP
+  containerPort: 8080

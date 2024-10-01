@@ -1,6 +1,19 @@
 {{- if .Values.schemaLoad.required }}
-apiVersion: v1
+apiVersion: batch/v1
 kind: Job
 metadata:
-  name: {{ .Release.Name }}-loadschema
-  namespace:
+  name: {{ .Release.Name }}-job
+spec:
+  backoffLimit: 1
+  template:
+    spec:
+      containers:
+        - name: job
+          image: chaitu1812/load-schema-rhel9
+          env:
+          {{- range $key, $value := .Values.schemaLoad.env }}
+            - name: {{ $key }}
+              value: {{ $value }}
+          {{- end }}
+      restartPolicy: Never
+{{- end }}
