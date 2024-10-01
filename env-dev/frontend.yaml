@@ -1,6 +1,6 @@
 env: dev
 
-replicas: 3
+replicas: 1
 
 tag: latest
 
