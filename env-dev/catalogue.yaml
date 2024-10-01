@@ -16,7 +16,7 @@ secrets:
   required: true
   env:
     MONGO: "true"
-    MONGO_URL: 172.31.21.239
+    MONGO_URL: "mongodb://172.31.21.239:27017/catalogue"
 
 service:
   port: 8080
