@@ -8,7 +8,7 @@ tag: latest
 secrets:
   required: true
   env:
-    catalogue: 10.105.150.24
+    catalogue: catalogue-svc
     user: localhost
     cart: localhost
     shipping: localhost
