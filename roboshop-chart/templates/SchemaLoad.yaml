@@ -1,0 +1,6 @@
+{{- if .Values.schemaLoad.required }}
+apiVersion: v1
+kind: Job
+metadata:
+  name: {{ .Release.Name }}-loadschema
+  namespace:
