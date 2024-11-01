@@ -1,4 +1,5 @@
-
+externalSecret:
+  enabled: yes
 
 app:
   replicas: ""
