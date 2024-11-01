@@ -18,11 +18,11 @@ spec:
           image: chaitu1812/{{ .Release.Name }}-rhel9
           envFrom:
           {{- if .Values.app.secret.enabled }}
-            - secretKeyRef:
+            - secretRef:
                 name: {{ .Release.Name }}
           {{- end }}
            {{- if .Values.app.configMap.enabled }}
-            - configMapKeyRef:
+            - configMapRef:
                 name: {{ .Release.Name }}
             {{- end }}
           ports:
