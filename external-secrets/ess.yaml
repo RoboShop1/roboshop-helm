@@ -9,6 +9,6 @@ spec:
     kind: ClusterSecretStore
   target:
     name: sample
-  data:
+  dataFrom:
     - extract:
         key: frontend
