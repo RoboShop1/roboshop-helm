@@ -19,11 +19,11 @@ spec:
           envFrom:
           {{- if .Values.app.secret.enabled }}
             - secretKeyRef:
-                name: {{ .Values.app.secret.name }}
+                name: {{ .Release.Name }}
           {{- end }}
            {{- if .Values.app.configMap.enabled }}
             - configMapKeyRef:
-                name: {{ .Values.app.configMap.name }}
+                name: {{ .Release.Name }}
             {{- end }}
           ports:
             - containerPort: {{ .Values.app.containerPort }}
