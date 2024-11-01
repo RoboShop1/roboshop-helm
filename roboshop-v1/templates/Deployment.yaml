@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: {{ .Values.app.containerName }}
-          image: chaitu1812/{{ .Release.Name }}
+          image: chaitu1812/{{ .Release.Name }}-rhel9
           envFrom:
           {{- if .Values.app.secret.enabled }}
             - secretKeyRef:

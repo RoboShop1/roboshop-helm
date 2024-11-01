@@ -1,5 +1,6 @@
 externalSecret:
   enabled: yes
+  name: frontend
 
 app:
   replicas: ""
