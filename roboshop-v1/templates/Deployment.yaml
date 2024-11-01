@@ -9,6 +9,9 @@ spec:
     matchLabels:
       app: {{ .Release.Name }}
   template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}
     containers:
       - name: {{ .Values.app.containerName }}
         image: chaitu1812/{{ .Release.Name }}
