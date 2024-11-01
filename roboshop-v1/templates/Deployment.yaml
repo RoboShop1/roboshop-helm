@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}
+  namespace: {{ .Release.Namespace }}
+spec:
+  replicas: {{ default 2 .Values.app.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}
+  template:
+    containers:
+      - name: {{ .Values.app.containerName }}
+        image: chaitu1812/{{ .Release.Name }}
+        envFrom:
+        {{- if .Values.app.secret.enabled }}
+          - secretKeyRef:
+              name: {{ .Values.app.secret.name }}
+        {{- end }}
+         {{- if .Values.app.configMap.enabled }}
+          - configMapKeyRef:
+              name: {{ .Values.app.configMap.name }}
+          {{- end }}
+        ports:
+          - containerPort: {{ .Values.app.containerPort }}
+

@@ -1,0 +1,20 @@
+env: dev
+
+replicas: 1
+
+tag: latest
+
+
+secrets:
+  required: true
+  env:
+    catalogue: catalogue-svc
+    user: localhost
+    cart: localhost
+    shipping: localhost
+    payment: localhost
+
+service:
+  port: 80
+  type: NodePort
+  containerPort: 80

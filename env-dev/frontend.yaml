@@ -1,20 +1,17 @@
-env: dev
+app:
+  replicas: ""
+  containerName: nginx
+  containerPort: 80
 
-replicas: 1
+  secret:
+    enables: yes
+    name: frontend
+  configMap:
+    enables: no
+    name: frontend
 
-tag: latest
-
-
-secrets:
-  required: true
-  env:
-    catalogue: catalogue-svc
-    user: localhost
-    cart: localhost
-    shipping: localhost
-    payment: localhost
 
 service:
+  type:
   port: 80
-  type: NodePort
-  containerPort: 80
+  targetPort: 80
