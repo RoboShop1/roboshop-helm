@@ -1,3 +1,6 @@
+secret: no
+
+
 app:
   replicas: ""
   containerName: nginx
@@ -7,11 +10,12 @@ app:
     enables: yes
     name: frontend
   configMap:
+
     enables: no
     name: frontend
 
 
 service:
-  type:
+  type: NodePort
   port: 80
   targetPort: 80
