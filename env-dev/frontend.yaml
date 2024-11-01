@@ -1,4 +1,3 @@
-secret: no
 
 
 app:
@@ -10,7 +9,6 @@ app:
     enables: yes
     name: frontend
   configMap:
-
     enables: no
     name: frontend
 
