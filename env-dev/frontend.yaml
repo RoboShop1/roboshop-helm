@@ -1,6 +1,6 @@
 externalSecret:
   enabled: yes
-  name: frontend
+
 
 app:
   replicas: ""
@@ -8,10 +8,10 @@ app:
   containerPort: 80
 
   secret:
-    enables: yes
+    enabled: yes
     name: frontend
   configMap:
-    enables: no
+    enabled: no
     name: frontend
 
 
