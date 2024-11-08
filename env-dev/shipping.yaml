@@ -9,7 +9,7 @@ schemaLoad:
 
 
 app:
-  replicas: ""
+  replicas: 1
   containerName: shipping
   containerPort: 8080
 
