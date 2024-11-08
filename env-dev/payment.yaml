@@ -1,0 +1,23 @@
+externalSecret:
+  enabled: yes
+
+
+schemaLoad:
+  required: no
+  name: ""
+
+app:
+  replicas: ""
+  containerName: payment
+  containerPort: 8080
+  secret:
+    enabled: yes
+    name: payment
+  configMap:
+    enabled: no
+    name: payment
+
+service:
+  type: ""
+  port: 8080
+  targetPort: 8080

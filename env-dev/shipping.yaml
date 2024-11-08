@@ -1,0 +1,27 @@
+externalSecret:
+  enabled: yes
+
+
+schemaLoad:
+  required: yes
+  name: shipping-load
+
+
+
+app:
+  replicas: ""
+  containerName: shipping
+  containerPort: 8080
+
+  secret:
+    enabled: yes
+    name: shipping
+  configMap:
+    enabled: no
+    name: shipping
+
+
+service:
+  type: ""
+  port: 8080
+  targetPort: 8080

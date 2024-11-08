@@ -1,0 +1,23 @@
+externalSecret:
+  enabled: yes
+
+
+schemaLoad:
+  required: no
+  name: ""
+
+app:
+  replicas: ""
+  containerName: user
+  containerPort: 8080
+  secret:
+    enabled: yes
+    name: user
+  configMap:
+    enabled: no
+    name: user
+
+service:
+  type: ""
+  port: 8080
+  targetPort: 8080

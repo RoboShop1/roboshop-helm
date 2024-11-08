@@ -1,0 +1,23 @@
+externalSecret:
+  enabled: yes
+
+
+schemaLoad:
+  required: no
+  name: ""
+
+app:
+  replicas: ""
+  containerName: cart
+  containerPort: 8080
+  secret:
+    enabled: yes
+    name: cart
+  configMap:
+    enabled: no
+    name: cart
+
+service:
+  type: ""
+  port: 8080
+  targetPort: 8080
