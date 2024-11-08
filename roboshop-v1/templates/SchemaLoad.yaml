@@ -8,14 +8,18 @@ metadata:
     "helm.sh/hook": pre-install,pre-upgrade,pre-rollback
     "helm.sh/hook-weight": "1"
 spec:
+  restartPolicy: Never
   initContainers:
     - name: {{ .Values.schemaLoad.name }}
       image: chaitu1812/load-schema-rhel9
-      restartPolicy: Never
       envFrom:
       - secretRef:
           name: {{ .Values.schemaLoad.name }}
-{{- end }}
+  containers:
+    - name: success
+      image: alpine
+      command: ["sh","-c","echo schema init container success fully executed"]
+ {{- end }}
 
 
 
