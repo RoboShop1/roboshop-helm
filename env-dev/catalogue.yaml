@@ -1,24 +1,27 @@
 externalSecret:
   enabled: yes
 
+
 schemaLoad:
-  required: no
+  required: yes
   name: catalogue-load
+
+
 
 app:
   replicas: ""
-  containerName: nginx
-  containerPort: 80
+  containerName: catalogue
+  containerPort: 8080
 
   secret:
     enabled: yes
-    name: frontend
+    name: catalogue
   configMap:
     enabled: no
     name: frontend
 
 
 service:
-  type: NodePort
-  port: 80
-  targetPort: 80
+  type: ""
+  port: 8080
+  targetPort: 8080
