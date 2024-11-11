@@ -8,7 +8,7 @@ schemaLoad:
   name: ""
 
 app:
-  replicas: 2
+  replicas: 1
   containerName: cart
   containerPort: 8080
   secret:

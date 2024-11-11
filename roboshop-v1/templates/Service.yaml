@@ -4,7 +4,7 @@ metadata:
   name: {{ .Release.Name }}
   namespace: {{ .Release.Namespace }}
   annotations:
-    name: frontend
+    name: {{ .Release.Name }}
      {{- if .Values.ingress.required  }}
     alb.ingress.kubernetes.io/healthcheck-interval-seconds: '10'
     alb.ingress.kubernetes.io/healthcheck-timeout-seconds:  '5'
