@@ -9,7 +9,7 @@ schemaLoad:
   name: catalogue-load
 
 app:
-  replicas: ""
+  replicas: 1
   containerName: nginx
   containerPort: 80
 
