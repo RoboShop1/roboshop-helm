@@ -1,6 +1,9 @@
 externalSecret:
   enabled: yes
 
+ingress:
+  required: yes
+
 schemaLoad:
   required: no
   name: catalogue-load
