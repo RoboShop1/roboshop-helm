@@ -9,6 +9,8 @@ metadata:
     alb.ingress.kubernetes.io/subnets: subnet-062f6abdff28024f5, subnet-05b3bc19d3fe1ba1f
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/healthcheck-port: traffic-port
+    alb.ingress.kubernetes.io/group.name: project.roboshop
+    alb.ingress.kubernetes.io/group.order: '10'
 spec:
   rules:
     - host: "{{ .Release.Name }}.azcart.online"
