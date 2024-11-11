@@ -19,6 +19,6 @@ app:
 
 
 service:
-  type: NodePort
+  type: ""
   port: 80
   targetPort: 80
